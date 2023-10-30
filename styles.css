@@ -1,0 +1,32 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	background-color: rgb(63, 111, 93);
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 30px;
+	background-color: #007bff;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #00b318e2;
+}
+
+p {
+	font-size: 45px;
+	margin-top: 20px;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #f0f0f0;
+}
+
+/* استایل برای تغییر رنگ متن */
+.highlight {
+	color: rgb(212, 0, 255);
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>تشخیص صدا</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+	</head>
+	<body>
+		<button id="startButton">شروع تشخیص صدا</button>
+		<p id="output">
+			<span class="highlight">🙏 لطفا یه چیزی بگید </span>
+		</p>
+
+		<script>
+			const startButton = document.getElementById('startButton')
+			const output = document.getElementById('output')
+			const recognition =
+				new webkitSpeechRecognition() || new SpeechRecognition()
+
+			recognition.onresult = function (event) {
+				const result = event.results[0][0].transcript
+				output.innerHTML = ' 🎉 ' + result + ' 🎉' + ': شما اینو گفتی  '
+			}
+
+			startButton.addEventListener('click', function () {
+				recognition.start()
+			})
+		</script>
+	</body>
+</html>
